@@ -1,0 +1,34 @@
+@use 'globals' as *;
+@use "base";
+@use "header";
+
+body{
+  background: $color-1;
+}
+#start{
+  @extend %pos-full;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-2;
+  font-size: $font-xxl;
+  scale:0;
+  transition: .3s;
+  &.run{
+    scale:1;
+  }
+}
+.footer{
+  background: $brand-color;
+  text-align: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  translate: 0 100%;
+  transition: .4s;
+  &.run{
+    translate: 0;
+  }
+}

@@ -1,0 +1,55 @@
+.title {
+padding: 4rem 0;
+    display: flex;
+    margin-top: 4rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    text-align:center;
+    position: relative;
+    font-weight: 300;
+
+}
+
+.main-color {
+    color: #21b0c6;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid-container {
+    display: flex;
+    align-items: center;
+}
+.grid-container p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.absolut-paws-1 {
+    top: 10%;
+    left: 10%;
+    width:100px;
+    height: 100px;
+    position: absolute;
+}
+.absolut-paws-2 {
+    top: 30%;
+    left: 20%;
+    width:100px;
+    transform: rotate(180deg);
+    height: 100px;
+    position: absolute;
+}
+.absolut-paws-3 {
+    top: 30%;
+    right: 10%;
+    width:100px;
+    transform: rotate(45deg);
+    height: 100px;
+    position: absolute;
+}
