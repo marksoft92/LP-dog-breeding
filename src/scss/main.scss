@@ -2,6 +2,7 @@
 @use "base";
 @use "header";
 @use "footer";
+@use "gallery";
 
 body {
   background: $color-1;
@@ -131,6 +132,7 @@ h2 {
   z-index: 9999;
   position: relative;
   background-image: url("../images/paws-girl.png");
+  z-index: 1;
 }
 .paws-marker {
   position: absolute;
@@ -165,7 +167,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .container:before {
-    left: 8px;
+    left: 1.7rem;
     width: 2px;
   }
   .timeline-block {
@@ -180,4 +182,16 @@ h2 {
     float: none;
     direction: ltr;
   }
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.border-none ul li a {
+  border: none;
+}
+
+.flex-bt {
+  @extend %flex-bt;
 }

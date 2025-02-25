@@ -34,7 +34,7 @@
 $header-burger-radius: 6rem;
 .header-burger {
   $height: 0.3rem;
-  $bg: $bg-color;
+  $bg: $brand-color;
   padding: 0;
   width: 4rem;
   height: 2.7rem;
@@ -83,6 +83,23 @@ $header-burger-radius: 6rem;
   padding-left: 8rem;
   font-size: $font-xl;
 
+  li {
+    font-weight: 600;
+    font-family: Pacifico;
+  }
+
+  .background-header {
+    filter: grayscale(1);
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -99,7 +116,7 @@ body {
   &.is-scroll {
     header {
       box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
-      background: $bg-color;
+      background: white;
     }
   }
   &.is-scroll,
@@ -111,7 +128,7 @@ body {
       &::before,
       span,
       &::after {
-        background: $bg-color-dark;
+        background: $brand-color;
       }
     }
   }
@@ -134,6 +151,23 @@ body {
     .header-nav-menu {
       transform: translateX(0);
       pointer-events: all;
+      li:hover {
+        color: $brand-color;
+      }
     }
+  }
+}
+
+.img-container-logo {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  bottom: 2rem;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  left: 0rem;
+  .zhpr-uci {
+    width: 15rem;
   }
 }
