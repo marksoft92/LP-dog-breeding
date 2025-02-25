@@ -1,11 +1,12 @@
-@use 'globals' as *;
+@use "globals" as *;
 @use "base";
 @use "header";
+@use "footer";
 
-body{
+body {
   background: $color-1;
 }
-#start{
+#start {
   @extend %pos-full;
   height: 100vh;
   display: flex;
@@ -13,22 +14,170 @@ body{
   justify-content: center;
   color: $color-2;
   font-size: $font-xxl;
-  scale:0;
-  transition: .3s;
-  &.run{
-    scale:1;
+  scale: 0;
+  transition: 0.3s;
+  &.run {
+    scale: 1;
   }
 }
-.footer{
+.footer {
   background: $brand-color;
   text-align: center;
   position: fixed;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   translate: 0 100%;
-  transition: .4s;
-  &.run{
+  transition: 0.4s;
+  &.run {
     translate: 0;
+  }
+}
+
+section {
+  border-bottom: 1rem solid #21b0c6;
+}
+
+.baner-01 {
+  height: 100vh;
+  display: flex;
+  background-image: url("../img/background-shape.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: Pacifico;
+  font-weight: 300;
+  h1 {
+    font-size: $font-xxl;
+    font-weight: 700;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 4rem;
+
+  justify-items: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-family: Pacifico;
+}
+
+.container-timeline {
+  width: 80%;
+  padding: 50px 0;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #ccd1d9;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: -webkit-calc(50% + 15px);
+  width: -moz-calc(50% + 15px);
+  width: calc(50% + 15px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+}
+
+.marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #f5f7fa;
+  background: #4fc1e9;
+  margin-top: 10px;
+  z-index: 9999;
+  position: relative;
+  background-image: url("../images/paws-girl.png");
+}
+.paws-marker {
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 20px;
+}
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+  color: #666;
+}
+
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.timeline-content span {
+  font-size: 15px;
+  color: #a4a4a4;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: #888;
+}
+
+@media screen and (max-width: 768px) {
+  .container:before {
+    left: 8px;
+    width: 2px;
+  }
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .timeline-block-right {
+    float: none;
+  }
+
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
   }
 }

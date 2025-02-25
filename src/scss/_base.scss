@@ -1,5 +1,5 @@
 @use "../../node_modules/@crossfox/css-start/dist/base.min.css";
-@use 'globals' as *;
+@use "globals" as *;
 @mixin isMobile {
   @media (max-width: $width-mob) {
     @content;
@@ -15,8 +15,8 @@
 html {
   font-size: 2.1vw;
 
-  @include isDesktop(){
-    font-size: .525vw;
+  @include isDesktop() {
+    font-size: 0.525vw;
   }
 }
 
@@ -29,16 +29,71 @@ main {
   flex-grow: 1;
 }
 
-
 .container {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
+.container-50 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  @include isMobile() {
+    width: 90%;
+  }
+}
+
+.baner-01 {
+  h1 {
+    @include isMobile() {
+      width: 100% !important;
+    }
+  }
+}
+
+.btn {
+  color: #fff;
+  font-size: 2.1rem;
+  line-height: 1;
+  padding: 1.9rem 2.5rem;
+  transition: all 0.3s, opacity 0.5s, color 0.3s 0s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 2.5rem;
+  border: 0.2rem solid;
+  display: block;
+  width: 15rem;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120%;
+    height: 105%;
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateX(-110%) skewX(-25deg);
+  }
+
+  &:hover:before {
+    transform: translateX(-7%) skewX(-25deg);
+    background: #21b0c6;
+    z-index: -1;
+  }
+}
 .section {
   padding: 7rem 0;
 }
-p+p{
+p + p {
   margin-top: 3rem;
 }

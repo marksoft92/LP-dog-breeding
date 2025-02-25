@@ -1,11 +1,10 @@
 $color-1: #1d1e22;
-$color-2: #fafafa;
-
+$color-2: linear-gradient(135deg, #0f172a, #1e293b);
 
 $width-mob: 980px;
 $text-color: #fafafa;
-$brand-color: #f17938;
-$secondary-text: #fff;
+$brand-color: #21b0c6;
+$secondary-text: #21b0c6;
 // light:
 $text-color: $color-1;
 $bg-color: $color-2;
@@ -19,5 +18,6 @@ $font-l: 2.4rem;
 $font-xl: 2.7rem;
 $font-xxl: 3.7rem;
 
-$font-header:  serif;
+$font-header: serif;
 $font-main: sans-serif;
+$font-title-section: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

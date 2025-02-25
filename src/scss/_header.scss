@@ -1,18 +1,18 @@
-@use 'globals' as *;
+@use "globals" as *;
 /* header */
-.header{
+.header {
   @extend %pos-fix;
-  transition: .4s;
+  transition: 0.4s;
   z-index: 9;
   translate: 0 -100%;
-
+  background-color: white;
   color: $bg-color;
-  &>.container{
+  & > .container {
     @extend %flex-bt;
     padding: 2rem 0;
   }
 }
-.loaded .header{
+.loaded .header {
   translate: 0;
 }
 
@@ -23,10 +23,11 @@
   align-items: center;
   position: relative;
   z-index: 10;
+
   img {
-    width: 3.2rem;
-    height: 3.2rem;
-    margin-right: .8rem;
+    width: 12.2rem;
+    height: 7.2rem;
+    margin-right: 0.8rem;
   }
 }
 
@@ -53,7 +54,7 @@ $header-burger-radius: 6rem;
     width: 100%;
     height: $height;
     background: $bg;
-    transition: .3s transform;
+    transition: 0.3s transform;
   }
 
   &::after,
@@ -93,28 +94,29 @@ $header-burger-radius: 6rem;
   }
 }
 
-
-
-body{
+body {
   // IS_SCROLL
-  &.is-scroll{
-    header{
-      box-shadow: 0 0 .25rem rgba(0,0,0,.4);
+  &.is-scroll {
+    header {
+      box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
       background: $bg-color;
     }
   }
-  &.is-scroll,  &.header-menu-active{
+  &.is-scroll,
+  &.header-menu-active {
     header {
       color: $text-color;
     }
-    .header-burger{
-      &::before, span, &::after{
+    .header-burger {
+      &::before,
+      span,
+      &::after {
         background: $bg-color-dark;
       }
     }
   }
   // IS_ACTIVE
-  &.header-menu-active{
+  &.header-menu-active {
     overflow: hidden;
     color: $bg-color-dark;
     .header-burger {
