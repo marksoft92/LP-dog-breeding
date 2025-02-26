@@ -7,6 +7,7 @@
   translate: 0 -100%;
   background-color: white;
   color: $bg-color;
+
   & > .container {
     @extend %flex-bt;
     padding: 2rem 0;
@@ -115,7 +116,7 @@ body {
   // IS_SCROLL
   &.is-scroll {
     header {
-      box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.4);
+      box-shadow: #000 0px 1px 10px;
       background: white;
     }
   }
