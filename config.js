@@ -8,7 +8,7 @@ const pathSSL = (name) => path.join(process.cwd(), "ssl", name);
 
 export default {
   TITLE: "Hodowla Maltańczyków Agnieszka Goździk - White Stars Maltan",
-  URL: MODE === "dev" ? "/" : "https://crossfox.dev",
+  URL: MODE === "dev" ? "/" : "https://marksoft92.github.io/LP-dog-breeding/",
   BASEURL: true,
   FOOTER_YEAR: new Date().getFullYear(),
   LANG: "en-US",
