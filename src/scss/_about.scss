@@ -26,9 +26,29 @@
   display: flex;
   align-items: center;
 }
-.grid-container p {
-  font-size: 2rem;
-  font-weight: 700;
+.grid-container {
+  img {
+    border-radius: 16px 42px;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 2rem;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+
+      left: 50%;
+      width: 50%;
+      height: 3px; /* Grubość obramowania */
+      background-color: #21b0c6;
+      transform: translateX(-50%); /* Wyśrodkowanie */
+    }
+  }
 }
 
 .absolut-paws-1 {

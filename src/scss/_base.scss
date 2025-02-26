@@ -67,6 +67,25 @@ main {
   }
 }
 
+.grid-container {
+  @include isMobile() {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+}
+.grid-container:nth-child(odd) {
+  @include isMobile() {
+    flex-direction: column-reverse;
+  }
+}
+.absolut-paws-1,
+.absolut-paws-2,
+.absolut-paws-3 {
+  @include isMobile() {
+    display: none;
+  }
+}
+
 .c-gallery__items {
   @include isMobile() {
     grid-template-columns: repeat(1, 1fr) !important;
@@ -125,8 +144,10 @@ p + p {
 
 .baner-01 {
   @include isMobile() {
-    background-image: url("../img/galery/img-lusia.jpg") !important;
+    background-image: url(../img/galery/img-lusia.jpg) !important;
     background: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay;
+    object-fit: cover;
+    background-position: center;
   }
 }
