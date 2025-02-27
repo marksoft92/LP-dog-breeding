@@ -52,19 +52,23 @@
 }
 
 .absolut-paws-1 {
-  top: 10%;
+  top: 7%;
   left: 10%;
   width: 100px;
   height: 100px;
   position: absolute;
+
+  z-index: -1;
 }
 .absolut-paws-2 {
-  top: 30%;
+  bottom: 36%;
   left: 20%;
   width: 100px;
   transform: rotate(180deg);
   height: 100px;
   position: absolute;
+
+  z-index: -1;
 }
 .absolut-paws-3 {
   top: 30%;
@@ -73,4 +77,6 @@
   transform: rotate(45deg);
   height: 100px;
   position: absolute;
+
+  z-index: -1;
 }
